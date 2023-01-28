@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* body style */
+
 body {
     margin: 0 auto;
     padding: 0;
@@ -13,6 +15,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/* index.html - logo, header, paragraph, and buttons */
+
+#logo {
+    d
 }
 
 #hdr {
@@ -46,4 +54,43 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* quiz-game - questions, answers and button */
+
+#questions {
+    margin-top: 100px;
+    font-family: 'Teko', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+#answers {
+    display: flex;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    list-style: none;
+    flex-direction: column;
+    padding: 0;
+}
+
+#answers li {
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#btn-submit {
+    display: flex;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #B22222;
+    cursor: pointer;
+    color: #fff;
 }
