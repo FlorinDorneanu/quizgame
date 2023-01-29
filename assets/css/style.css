@@ -7,20 +7,20 @@
 /* body style */
 
 body {
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    width: 100vh;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+   margin: auto;
+   max-width: 700px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
 }
 
 /* index.html - logo, header, paragraph, and buttons */
 
-#logo {
-    d
+#logo  {
+    margin: 0;
+    padding: 0;
 }
 
 #hdr {
@@ -58,40 +58,52 @@ body {
 
 /* quiz-game - questions, answers and button */
 
+#quiz-container {
+    background-color: #FFDF00;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
 #questions {
-    margin-top: 100px;
     font-family: 'Teko', sans-serif;
     font-size: 3.5rem;
     text-align: center;
 }
 
 #answers {
-    display: flex;
-    text-align: center;
+    margin: 0;
+    padding: 0;
     font-family: 'Rajdhani', sans-serif;
     font-size: 1.8rem;
     list-style: none;
-    flex-direction: column;
-    padding: 0;
 }
 
 #answers li {
+    width: 80%;
     border: 2px solid;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px auto;
     cursor: pointer;
+    color: #fff;
+    background-color: #1530A6;
+    padding: 10px;
 }
 
 #btn-submit {
-    display: flex;
     font-family: 'Rajdhani', sans-serif;
     font-size: 1.5rem;
     width: 150px;
-    justify-content: center;
-    align-items: center;
     margin: 20px;
     border-radius: 10px;
     background-color: #B22222;
     cursor: pointer;
     color: #fff;
+}
+
+#timer {
+    margin-bottom: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3rem;
+
 }
