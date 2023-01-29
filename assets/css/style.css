@@ -7,20 +7,21 @@
 /* body style */
 
 body {
-   margin: auto;
-   max-width: 700px;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+   margin: 0 auto;
+   max-width: 1000px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    text-align: center;
+   flex-direction: column;
+   padding-top: 50px;
 }
 
 /* index.html - logo, header, paragraph, and buttons */
 
 #logo  {
-    margin: 0;
-    padding: 0;
+    padding-bottom: 50px;
+    max-width: 80%;
 }
 
 #hdr {
@@ -59,10 +60,10 @@ body {
 /* quiz-game - questions, answers and button */
 
 #quiz-container {
-    background-color: #FFDF00;
+    background-color: rgba(255, 223, 0, 0.8);
     border-radius: 10px;
     padding: 10px;
-    width: 100%;
+    width: 60%;
 }
 
 #questions {
@@ -102,8 +103,31 @@ body {
 }
 
 #timer {
-    margin-bottom: 0;
+    margin-bottom: 50px;
     font-family: 'Rajdhani', sans-serif;
     font-size: 3rem;
 
+}
+
+/* Game rules */
+
+#rules-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+}
+
+#game-rules {
+   background-color: rgba(255, 223, 0, 0.8);
+   width: 60%;
+   padding: 20px;
+   border-radius: 10px;
+   list-style: none;
+}
+
+#game-rules li {
+    padding: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    color: black;
+    
 }
