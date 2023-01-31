@@ -1,14 +1,14 @@
 // Question box
 
-let questionBox = [
+let questionsBox = [
     {
-        question : "",
-        options : [", ", ", "]
-        answer : ""
+        question : "How many bones are there in an adult human body?",
+        options : ["186", "206", "286", "306"],
+        answer : "206"
     },
     {
         question : "How many sides has a Hexagon?",
-        options : ["5", "6", "7", "8"]
+        options : ["5", "6", "7", "8"],
         answer : "6"
     },
     {
@@ -42,7 +42,7 @@ let questionBox = [
         answer :"Baghdad"
     }, 
     {
-        question : "What colour is the “m” from the McDonald’s logo?",
+        question : "What colour is the “m” from the McDonald's logo?",
         options :["Blue", "Red", "Yellow", "Black"],
         answer :"Yellow"
     }, 
@@ -52,3 +52,23 @@ let questionBox = [
         answer :"Avocado"
     },
 ]
+
+// question container variables
+
+let questions = document.getElementById ("questions");
+let options = document.getElementById("option");
+let questionsContainer = document.getElementById ("questions-container");
+
+// display questions
+
+function displayQuestion() {
+    let randomQuestions = Math.floor(Math.random() * questions.lenght);
+    document.getElementById("questions").innerHTML = questions[randomQuestions];
+    for(let i = 0; i < 4; i++) {
+        document.getElementById("option").innerHTML = answers[i];
+    }
+
+}
+
+
+
