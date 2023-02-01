@@ -50,25 +50,29 @@ let questionsBox = [
         question : "What is guacamole made of?",
         options :["Banana", "Yoghurt", "Avocado", "Chick Pea"],
         answer :"Avocado"
-    },
+    }
 ]
+
 
 // question container variables
 
-let questions = document.getElementById ("questions");
-let options = document.getElementById("option");
 let questionsContainer = document.getElementById ("questions-container");
+let questionTitle = document.getElementById("question-title");
+let correctAnswer = "answer";
 
 // display questions
 
-function displayQuestion() {
+function displayQuestion(questions) {
     let randomQuestions = Math.floor(Math.random() * questions.lenght);
-    document.getElementById("questions").innerHTML = questions[randomQuestions];
+    questionTitle.innerHTML = questions[randomQuestions.question];
     for(let i = 0; i < 4; i++) {
-        document.getElementById("option").innerHTML = answers[i];
+        document.getElementById(`option${i}`).innerHTML = questionBox[i].options[i];
     }
-
 }
 
 
+how can i get the title to a specific question in this array
+function that gives random nbumber btw 0 - questionBox.lenght
+add a general timer for entire quiz
+connect highscores to javascript to reset
 
