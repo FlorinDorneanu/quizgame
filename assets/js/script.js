@@ -1,4 +1,4 @@
-// Question box
+// - Question box -
 
 let questionsBox = [
     {
@@ -54,30 +54,27 @@ let questionsBox = [
 ]
 
 
-// question container variables
+// - Question container variables -
 
 let questionsContainer = document.getElementById ("questions-container");
-let questionTitle = "question";
+let questionTitle = document.getElementById("question-title");
 let correctAnswer = "answer";
 let availibleOptions = "options"
-let output = [];
-// display questions
 
-function displayQuestion(questionsContainer) {
-    let randomQuestions = Math.floor(Math.random() * question.lenght);
-    questionTitle.innerHTML = question[randomQuestions.question];
+
+// - Display questions function -
+
+function displayQuestion(questionsBox) {
     for(let i = 0; i < question.lenght; i++) {
         document.getElementById(`question-title${i}`).innerHTML = questionsBox[i].question[i];
+    let randomQuestions = Math.floor(Math.random() * question.lenght);
+        questionTitle.innerHTML = question[randomQuestions.question];
     };
-    availibleOptions.innerHTML = options;
     for(let i = 0; i < 4; i++) {
         document.getElementById(`option${i}`).innerHTML = questionsBox[i].options[i];
-    };
-
-    questionsContainer.innerHTML = output.join("");
+    }
 }
-
-displayQuestion(questionsContainer);
+displayQuestion(questionsBox);
 
 
 
