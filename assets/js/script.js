@@ -57,22 +57,31 @@ let questionsBox = [
 // question container variables
 
 let questionsContainer = document.getElementById ("questions-container");
-let questionTitle = document.getElementById("question-title");
+let questionTitle = "question";
 let correctAnswer = "answer";
-
+let availibleOptions = "options"
+let output = [];
 // display questions
 
-function displayQuestion(questions) {
-    let randomQuestions = Math.floor(Math.random() * questions.lenght);
-    questionTitle.innerHTML = questions[randomQuestions.question];
+function displayQuestion(questionsContainer) {
+    let randomQuestions = Math.floor(Math.random() * question.lenght);
+    questionTitle.innerHTML = question[randomQuestions.question];
+    for(let i = 0; i < question.lenght; i++) {
+        document.getElementById(`question-title${i}`).innerHTML = questionsBox[i].question[i];
+    };
+    availibleOptions.innerHTML = options;
     for(let i = 0; i < 4; i++) {
-        document.getElementById(`option${i}`).innerHTML = questionBox[i].options[i];
-    }
+        document.getElementById(`option${i}`).innerHTML = questionsBox[i].options[i];
+    };
+
+    questionsContainer.innerHTML = output.join("");
 }
 
+displayQuestion(questionsContainer);
 
-how can i get the title to a specific question in this array
-function that gives random nbumber btw 0 - questionBox.lenght
-add a general timer for entire quiz
-connect highscores to javascript to reset
+
+
+
+
+
 
